@@ -3,6 +3,7 @@
     <HeaderVue/>
     <main-vue/>
     <merch-vue/>
+    <info-vue/>
   </div>
 </template>
 
@@ -10,13 +11,15 @@
 import HeaderVue from './components/HeaderComponent.vue'
 import MainVue from './components/MainComponent.vue'
 import MerchVue from './components/MerchComponent.vue'
+import InfoVue from './components/InfoComponent.vue'
 
 export default {
   name: 'App',
   components: {
     HeaderVue,
     MainVue,
-    MerchVue
+    MerchVue,
+    InfoVue
   }
 }
 </script>
