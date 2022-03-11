@@ -4,6 +4,7 @@
     <main-vue/>
     <merch-vue/>
     <info-vue/>
+    <footer-vue/>
   </div>
 </template>
 
@@ -12,6 +13,7 @@ import HeaderVue from './components/HeaderComponent.vue'
 import MainVue from './components/MainComponent.vue'
 import MerchVue from './components/MerchComponent.vue'
 import InfoVue from './components/InfoComponent.vue'
+import FooterVue from './components/FooterComponent.vue'
 
 export default {
   name: 'App',
@@ -19,7 +21,8 @@ export default {
     HeaderVue,
     MainVue,
     MerchVue,
-    InfoVue
+    InfoVue,
+    FooterVue
   }
 }
 </script>
