@@ -2,9 +2,13 @@
     <body>
         <section class="jumbo">
         </section>
-        <section>
+        <section class="comics-thumb">
             
-            <CardsVue/>
+            <MyComponent v-for="(comic, index) in comics" 
+            :key="index"
+            :srcThumb="comic.thumb"
+            :title="comic.series"
+            />
             
         </section>
       
@@ -12,12 +16,11 @@
 </template>
 
 <script>
-
-import CardsVue from './CardsComponent.vue'
+import MyComponent from './MyComponent.vue'
 
 export default {
       components: {
-        CardsVue
+        MyComponent
   },
         name: 'MainVue',
     
@@ -87,7 +90,7 @@ data(){
   {
     "thumb": "https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2020/10/BMWK_HQ_01_300-001_HD_5f7cb4945e13f6.89501032.jpg?itok=sVwALbUX",
     "price": "$4.99",
-    "series": "Batman: White Knight Presents: Harley Quinn",
+    "series": "Batman: White Knight Presents",
     "type": "comic book"
   },
   {
@@ -107,9 +110,8 @@ data(){
 
 <style lang="scss" scoped>
 
-    .container-content{
-        background-color: black;
-        padding: 20px;
+    body{
+      background-color: black;
     }
     .content-empty{
         max-width: 1024px;
@@ -124,10 +126,14 @@ data(){
         background-size: cover;
     }
     
-    h6{
-        color: white;
-        text-transform: uppercase;
-        text-align: center;
+    .comics-thumb{
+      padding: 20px 0;
+      max-width: 1024px;
+      display: flex;
+      flex-grow: 1;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
 
 </style>
